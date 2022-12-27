@@ -1,11 +1,10 @@
 <template>
   <div class="searchInput">
-    <input type="search" class="searchInputBar" placeholder="搜尋關鍵字" /><button
+    <input v-model="inputValue" type="search" class="searchInputBar" placeholder="搜尋關鍵字" @keyup="checkValue"/><button
       class="searchIcon"
     >
-      <SvgIcon class="icon" name="search"></SvgIcon>
+      <SvgIcon v-if="visible" class="icon" name="search"></SvgIcon>
     </button>
-    {{ value }}
   </div>
 </template>
 <script>
@@ -14,6 +13,15 @@ export default {
 }
 </script>
 <script setup>
+import { ref } from 'vue'
+const inputValue = ref('')
+const visible = ref(true)
+const checkValue = () =>{
+  if(inputValue.value == '')
+   visible.value = true
+   else
+   visible.value = false
+}
 </script>
 <style lang="scss" scoped>
 .searchInput {
