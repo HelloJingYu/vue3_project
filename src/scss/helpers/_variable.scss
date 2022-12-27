@@ -1,4 +1,4 @@
- // z-index
+// z-index
 $z-index-sticky: 1000;
 $z-index-dropdown: 1020;
 $z-index-dropdown-on-sticky: 1025;
@@ -19,16 +19,17 @@ $primary-3: rgba(63, 177, 149, 0.08); // 8%
 $text-1: #222; // primary
 $text-2: rgba(0, 0, 0, 0.6); // second
 $text-3: rgba(0, 0, 0, 0.38); // third
+$white: #fff;
 
 // backgroud
 $bg-1: #fff;
 $bg-2: #fafafa;
 $line: rgba(0, 0, 0, 0.08);
 
-//shadow
+// shadow
 $shadow: 0 14px 24px rgba(0, 0, 0, 0.04);
 
-//font
+// font
 $font-sm: 1rem; // sm 正文
 $font-md: 1.125rem; // lg/md 正文
 $font-note: 0.875rem; // 備註

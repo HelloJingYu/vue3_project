@@ -1,0 +1,37 @@
+@mixin button($textColor, $textHover, $textActive, $bgColor, $bgHover, $bgActive) {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 8.5px;
+  height: 44px;
+  font-weight: 400;
+  color: $textColor;
+  background: $bgColor;
+  border: 1px solid $primary-1;
+  border-radius: 8px;
+  font-style: normal;
+  line-height: 1.6875rem;
+  gap: 8px;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    color: $textHover;
+    background: $bgHover;
+  }
+
+  &:active:not(:disabled) {
+    color: $textActive;
+    background: $bgActive;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.hollowButton {
+  @include button($text-1, $white, $white, $bg-1, $primary-1, $primary-1);
+}
+
+.solidButton {
+  @include button($white, $text-1, $text-1, $primary-1, $bg-1, $bg-1);
+}

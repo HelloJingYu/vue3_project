@@ -14,6 +14,7 @@
     <PiniaExample v-if="demo === 'Pinia'"></PiniaExample>
     <SvgExample v-if="demo === 'Svg'"></SvgExample>
     <IconExample></IconExample>
+    <ButtonExample></ButtonExample>
   </div>
 </template>
 <script>
@@ -23,9 +24,10 @@ export default {
 </script>
 <script setup>
 import { computed, reactive } from 'vue'
+import ButtonExample from './components/buttonExample.vue'
+import IconExample from './components/iconExample.vue'
 import PiniaExample from './components/PiniaExample.vue'
 import SvgExample from './components/SvgExample.vue'
-import IconExample from './components/iconExample.vue';
 
 const menuConfig = reactive({
   isOpen: false,
@@ -126,6 +128,7 @@ const clickMenuItem = index => {
   }
 }
 
-// .example {
-// }
+.example {
+  padding: 2rem;
+}
 </style>
