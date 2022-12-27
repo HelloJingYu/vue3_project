@@ -13,6 +13,7 @@
     <h1>Example</h1>
     <PiniaExample v-if="demo === 'Pinia'"></PiniaExample>
     <SvgExample v-if="demo === 'Svg'"></SvgExample>
+    <IconExample></IconExample>
   </div>
 </template>
 <script>
@@ -24,6 +25,7 @@ export default {
 import { computed, reactive } from 'vue'
 import PiniaExample from './components/PiniaExample.vue'
 import SvgExample from './components/SvgExample.vue'
+import IconExample from './components/iconExample.vue';
 
 const menuConfig = reactive({
   isOpen: false,
