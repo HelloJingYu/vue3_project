@@ -15,6 +15,7 @@
     <SvgExample v-if="demo === 'Svg'"></SvgExample>
     <IconExample></IconExample>
     <ButtonExample></ButtonExample>
+    <SearchInputExample></SearchInputExample>
   </div>
 </template>
 <script>
@@ -26,8 +27,9 @@ export default {
 import { computed, reactive } from 'vue'
 import ButtonExample from './components/buttonExample.vue'
 import IconExample from './components/iconExample.vue'
+import SearchInputExample from './components/SearchInput.vue'
 import PiniaExample from './components/PiniaExample.vue'
-import SvgExample from './components/SvgExample.vue'
+import SvgExample from './components/SvgExample.vue' 
 
 const menuConfig = reactive({
   isOpen: false,
