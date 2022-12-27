@@ -1,4 +1,4 @@
-// z-index
+ // z-index
 $z-index-sticky: 1000;
 $z-index-dropdown: 1020;
 $z-index-dropdown-on-sticky: 1025;
@@ -7,3 +7,32 @@ $z-index-modal-backdrop: 1040;
 $z-index-modal: 1050;
 $z-index-popover: 1060;
 $z-index-tooltip: 1070;
+
+// style guide
+// color
+// primary
+$primary-1: #3fb195;
+$primary-2: rgba(63, 177, 149, 0.2); // 20%
+$primary-3: rgba(63, 177, 149, 0.08); // 8%
+
+// text
+$text-1: #222; // primary
+$text-2: rgba(0, 0, 0, 0.6); // second
+$text-3: rgba(0, 0, 0, 0.38); // third
+
+// backgroud
+$bg-1: #fff;
+$bg-2: #fafafa;
+$line: rgba(0, 0, 0, 0.08);
+
+//shadow
+$shadow: 0 14px 24px rgba(0, 0, 0, 0.04);
+
+//font
+$font-sm: 1rem; // sm 正文
+$font-md: 1.125rem; // lg/md 正文
+$font-note: 0.875rem; // 備註
+
+$h1: 3.625rem; //58px lg大標
+$h2: 2.0625rem; //33px sm大標
+$h3: 1.5rem; //24px page標題
