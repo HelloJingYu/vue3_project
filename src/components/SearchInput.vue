@@ -1,9 +1,10 @@
 <template>
   <div class="searchInput">
-    <input v-model="inputValue" type="search" class="searchInputBar" placeholder="搜尋關鍵字" @keyup="checkValue"/><button
+    <input v-model="inputValue" class="searchInputBar" placeholder="搜尋關鍵字" @keyup="checkValue"/><button
       class="searchIcon"
     >
       <SvgIcon v-if="visible" class="icon" name="search"></SvgIcon>
+      <SvgIcon v-else class="icon" name="delete" @click="deleteInput"></SvgIcon>
     </button>
   </div>
 </template>
@@ -22,29 +23,39 @@ const checkValue = () =>{
    else
    visible.value = false
 }
+const deleteInput=()=>{
+  inputValue.value = ""
+   visible.value = true
+}
 </script>
 <style lang="scss" scoped>
 .searchInput {
   display: flex;
+  max-width: 306px;//隨便取的
 }
 
 .searchIcon {
-  margin: -2.3rem;
+  margin-left:-2.3rem;
   background: none;
   border: none;
+  display: flex;
+  align-items: center;
 }
 
 .icon {
   width: 18px;
+  
 }
 
 .searchInputBar {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 8px 12px;
   background: #fafafa;
+  line-height: 0%;
 
   /* line 8% */
 
