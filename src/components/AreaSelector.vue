@@ -20,17 +20,7 @@
       <SvgIcon v-if="visible" class="icon" name="search"></SvgIcon>
     </button>
   </div>
-  <div class="pagination">
-    <button class="pagination__button--hollow">1</button>
-    <span>...</span>
-    <button class="pagination__button--hollow">3</button>
-    <button class="pagination__button--hollow">4</button>
-    <button class="pagination__button--solid">5</button>
-    <button class="pagination__button--hollow">6</button>
-    <button class="pagination__button--hollow">7</button>
-    <span>...</span>
-    <button class="pagination__button--hollow">10</button>
-  </div>
+
 </template>
 <script>
 export default {
