@@ -1,5 +1,5 @@
 <template>
-  <div v-show="menuConfig.isOpen" class="mask" @click="menuConfig.isOpen = false"></div>
+  <!-- <div v-show="menuConfig.isOpen" class="mask" @click="menuConfig.isOpen = false"></div>
   <div class="menu" :class="{ 'menu--open': menuConfig.isOpen }">
     <div class="menu__toggleButton" @click="menuConfig.isOpen = !menuConfig.isOpen">Menu</div>
     <ul class="menu__body">
@@ -7,15 +7,19 @@
         {{ i.desc }}
       </li>
     </ul>
-  </div>
+  </div> -->
 
   <div class="example">
     <h1>Example</h1>
-    <PiniaExample v-if="demo === 'Pinia'"></PiniaExample>
+    <!-- <PiniaExample v-if="demo === 'Pinia'"></PiniaExample> -->
     <SvgExample v-if="demo === 'Svg'"></SvgExample>
     <IconExample></IconExample>
     <ButtonExample></ButtonExample>
     <SearchInputExample></SearchInputExample>
+    <PaginationArea></PaginationArea>
+    <CardArea></CardArea>
+    <div style="height: 50px"></div>
+    <AreaSelector></AreaSelector>
   </div>
 </template>
 <script>
@@ -25,11 +29,14 @@ export default {
 </script>
 <script setup>
 import { computed, reactive } from 'vue'
+import AreaSelector from '../../components/AreaSelector.vue'
+import CardArea from '../../components/Card.vue'
+import PaginationArea from '../../components/Pagination.vue'
+import SearchInputExample from '../../components/SearchInput.vue'
 import ButtonExample from './components/buttonExample.vue'
 import IconExample from './components/iconExample.vue'
-import SearchInputExample from './components/SearchInput.vue'
-import PiniaExample from './components/PiniaExample.vue'
-import SvgExample from './components/SvgExample.vue' 
+// import PiniaExample from './components/PiniaExample.vue'
+import SvgExample from './components/SvgExample.vue'
 
 const menuConfig = reactive({
   isOpen: false,
@@ -46,13 +53,13 @@ const demo = computed(() => {
   return list[0].desc
 })
 
-const clickMenuItem = index => {
-  menuConfig.list.forEach(i => {
-    if (!i.isActive) return
-    i.isActive = false
-  })
-  menuConfig.list[index].isActive = true
-}
+// const clickMenuItem = index => {
+//   menuConfig.list.forEach(i => {
+//     if (!i.isActive) return
+//     i.isActive = false
+//   })
+//   menuConfig.list[index].isActive = true
+// }
 
 // computed
 </script>
@@ -132,5 +139,6 @@ const clickMenuItem = index => {
 
 .example {
   padding: 2rem;
+  background-color: $bg-2;
 }
 </style>

@@ -5,7 +5,7 @@
   </div>
   <div>
     <h2>solid button</h2>
-      <p><button class="solidButton">基隆</button></p>
+      <p><button class="solidButton">基隆基隆基隆基隆基隆</button></p>
   </div>
 </template>
 <script>

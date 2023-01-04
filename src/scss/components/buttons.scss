@@ -1,9 +1,9 @@
 @mixin button($textColor, $textHover, $textActive, $bgColor, $bgHover, $bgActive) {
-  display: inline-flex;
+  display:flex;
   align-items: center;
   padding: 12px 8.5px;
   height: 44px;
-  font-weight: 400;
+  text-align:center;
   color: $textColor;
   background: $bgColor;
   border: 1px solid $primary-1;
@@ -12,6 +12,8 @@
   line-height: 1.6875rem;
   gap: 8px;
   cursor: pointer;
+  transition: all .3s linear;
+  justify-content: center;
 
   &:hover:not(:disabled) {
     color: $textHover;
